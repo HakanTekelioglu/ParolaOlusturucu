@@ -52,6 +52,15 @@ body {
     margin-bottom: 30px;
 }
 
+.creator {
+    text-align: center;
+    color: #667eea;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-style: italic;
+}
+
 /* Parola Uzunluğu */
 .input-group {
     margin-bottom: 30px;
