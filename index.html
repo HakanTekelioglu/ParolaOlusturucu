@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parola Oluşturucu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">🔐 Parola Oluşturucu</h1>
+            <p class="subtitle">Güvenli parolalar oluşturun</p>
+
+            <!-- Parola Uzunluğu -->
+            <div class="input-group">
+                <label for="length">Parola Uzunluğu:</label>
+                <div class="length-container">
+                    <input type="range" id="length" min="4" max="32" value="12" class="slider">
+                    <span class="length-value" id="lengthValue">12</span>
+                </div>
+            </div>
+
+            <!-- Seçenekler -->
+            <div class="options-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="uppercase" checked>
+                    <span>Büyük Harfler (A-Z)</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span>Küçük Harfler (a-z)</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="numbers" checked>
+                    <span>Sayılar (0-9)</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="symbols" checked>
+                    <span>Özel Karakterler (!@#$...)</span>
+                </label>
+            </div>
+
+            <!-- Parola Gücü -->
+            <div class="strength-group">
+                <label>Parola Gücü:</label>
+                <div class="strength-bars">
+                    <div class="strength-bar" id="bar1"></div>
+                    <div class="strength-bar" id="bar2"></div>
+                    <div class="strength-bar" id="bar3"></div>
+                </div>
+                <p class="strength-text" id="strengthText">Orta Seviye</p>
+            </div>
+
+            <!-- Oluşturulan Parola -->
+            <div class="password-display">
+                <input type="text" id="passwordOutput" readonly placeholder="Parola buraya gelecek">
+                <button id="copyBtn" class="copy-btn" title="Kopyala">📋</button>
+            </div>
+
+            <!-- Butonlar -->
+            <div class="button-group">
+                <button id="generateBtn" class="btn btn-primary">Yeni Parola Oluştur</button>
+                <button id="refreshBtn" class="btn btn-secondary">Yenile</button>
+            </div>
+
+            <!-- İndirme Butonu -->
+            <div class="download-group">
+                <button id="downloadBtn" class="btn btn-download">⬇️ Parolayı İndir</button>
+            </div>
+
+            <!-- Bilgilendirme Mesajı -->
+            <p class="info-text" id="infoText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
